@@ -5,6 +5,10 @@
 ### Схема подключения arduino uno и модуля RC-522
 ![схема_подключения](https://github.com/Max-Tulskiy/Mifare-cards-cloner/assets/90907669/40527871-f068-4f30-a9cb-0f1d3af52206)
 
+Подробнее про работу с модулем RC-522 и организацию памяти в картах Mifare Classic 1k можно [здесь](https://alexgyver.ru/arduino-rfid/).
+
+Установить прошивку на Arduino можно через Arduino IDE, либо используя Platform IO, подробнее [тут](https://uchet-jkh.ru/i/kak-zagruzit-prosivku-v-arduino/).
+
 ### Возможности:
 + Копирование данных карты
 + Запись UID с копии карты на новую 

@@ -138,17 +138,19 @@ class Testing:
                 ui.testButton.setText("Сравнить?")
                 ui.textBrowser.setText("Вторая карта записана")
                 
-
     def testCards(self):
-
+        file_size_kb = 0
+        
         ui.testButton.setText("Приложите карту")
         serial.clear()
         str1 = "4"
         serial.write(str1.encode())
+
         serial.readyRead.connect(self.readDump)
 
-        file_size = os.path.getsize(filePath)
-        file_size_kb = file_size/1024
+        if os.path.isfile(filePath):
+            file_size = os.path.getsize(filePath)
+            file_size_kb = file_size/1024
 
         if file_size_kb > 10:
             ui.testButton.setText("Сравнение...")
